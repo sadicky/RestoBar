@@ -1,0 +1,6 @@
+Set up the receipt printer as your default printer in the Devices/Printers screen.
+In Firefox, type in “about:config” and hit Enter.
+A dialogue box will appear, press “I’ll be careful, I promise.”
+Right click, select New | Boolean.
+Type in: print.always_print_silent
+Select True, then OK.

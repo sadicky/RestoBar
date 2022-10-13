@@ -1,0 +1,11 @@
+<?php
+@session_start();
+if($_POST['test']!=0)
+{
+$_SESSION['cat']=$_POST['cat'];
+}
+else
+{
+  $_SESSION['cat']=0;
+}
+?>

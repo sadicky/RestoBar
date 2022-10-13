@@ -1,0 +1,199 @@
+.inside-btn
+{
+  background-color: #BAC6BC;
+  border-radius: 3px;
+  padding: 2% 5%;
+  min-height: 320px;
+}
+
+.button {
+ background-color: white;
+  color: black;
+  border: 2px solid #0c5285; /* Green */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 10px;
+  
+
+}
+
+.button a:hover
+{
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #0c5285; /* Green */
+  color: white;
+}
+
+.bg-axel
+{
+background-color: #8ecefa;
+}
+
+.bg-box-axel
+{
+  background-color: #e9eff9;
+  border-radius: 5px;
+  /*background-image:radial-gradient(white, gray); */
+  font-weight: bold;
+}
+
+.bg-top-menu
+{
+  background-color: #0c5285;
+}
+
+.bg-right-menu
+{
+  background-color: #ffe49b;
+}
+
+.bg-right-btn
+{
+  background-color: #0c5285;
+  color: #ffffff;
+}
+
+.bg-footer
+{
+  background-color: #0c5285;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+
+    display: inline-block;
+    cursor: pointer; /* "hand" cursor */
+    font-size:12px;
+    margin: 5px;
+}
+
+/*.label_div {
+  width: 120px;
+  float: left;
+  line-height: 28px;
+}*/
+.input_container {
+  /*height: 30px;
+  float: left;*/
+}
+.input_container input {
+  height: 35px;
+  /*width: 300px;*/
+  padding: 3px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+.input_container ul {
+  width: 90%;
+  border: 1px solid #eaeaea;
+  position: absolute;
+  z-index: 9;
+  background: #f3f3f3;
+  list-style: none;
+  padding-left: 0px;
+}
+.input_container ul li {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+.input_container ul li:hover {
+  background: #eaeaea;
+  cursor: pointer;
+}
+#country_list_id {
+  display: none;
+}
+
+/*select*/
+
+/*modal window*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 85%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}

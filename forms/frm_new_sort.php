@@ -1,0 +1,89 @@
+
+<?php
+@session_start();
+require_once '../load_model.php';
+/*$acc= new BeanAccounts();
+
+$datas=$acc->select_all_role('supplier');*/
+$perso=new BeanPersonne();
+?>
+<div class="card card-info" >
+                            <div class="card-header bg-light">Sortie du stock avec autres motifs</div>
+                            <div>
+                                <div class="card-body">
+                                    <form id="frm_new_sort" method="post">
+                                        <div class="form-body">
+<div class="form-row">
+    <div class="col-md-2">
+        <div class="form-group">
+            <label class="control-label">Date</label>
+            <input type="text" id="datepicker" name="date_sort" class="form-control" value="<?php echo date("Y-m-d"); ?>" required>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="control-label">Stock</label>
+            <select class="form-control" id="from_pos" name="from_pos" required>
+                <option value="">Choisir</option>
+                <?php
+                $datas=$perso->select_all_role('pos');
+                foreach($datas as $un)
+                {
+
+                    if($un['personne_id']==$_SESSION['pos'])
+                    {
+                     echo '<option value="'.$un['personne_id'].'" selected>'.$un['nom_complet'].'</option>';
+                    }
+                    else
+                    {
+                    echo '<option value="'.$un['personne_id'].'">'.$un['nom_complet'].'</option>';
+                    }
+                }
+                ?>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="control-label">Motif de sortie</label>
+            <input type="text" id="motif" name="motif" class="form-control" value="" required>
+            <input type="hidden" id="op_an_id" name="op_an_id" value="">
+        </div>
+    </div>
+    <div class="form-group col-md-2">
+    <label class="control-label">Stock : </label><br/>
+            <div class="form-check form-check-inline">
+            <label class="form-check-label mr-2">Details</label> <input type="radio" name="stock" id="det" value="1" checked>
+            </div>
+            <div class="form-check form-check-inline">
+            <label class="form-check-label mr-2">Gros</label> <input type="radio" name="stock" id="gros" value="0">
+            </div>
+  </div>
+
+    <div class="col-md-2" >
+        <div class="form-group" style="bottom:0;">
+            &nbsp;<br/>
+            <input type="hidden" id="type_sort" name="type_sort" value="Destruction">
+            <button id="action" data-id="Add" type="submit" class="btn btn-success" name="search"> <span class="fa fa-save"></span> <span id="label_action"></span></button>
+
+            <button type="reset" class="btn btn-default"><span class="fa fa-plus"></button>
+        </div>
+    </div>
+</div>
+</div>
+</form>
+                                </div>
+                            </div>
+                </div>
+
+<section class="form-row">
+<div class="col-lg-6" id="list_prod_sort">
+
+</div>
+<div class="col-lg-6" id="sort_form">
+
+</div>
+</section>
+<section id="sort_tab">
+
+</section>

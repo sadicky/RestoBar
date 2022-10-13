@@ -1,0 +1,26 @@
+[
+{
+  "libele":"Rest",
+  "btn":"btn-success"
+},
+{
+  "libele":"Zed",
+  "btn":"btn-warning"
+},
+{
+  "libele":"TR",
+  "btn":"btn-primary"
+},
+{
+  "libele":"VIP",
+  "btn":"btn-info"
+},
+{
+  "libele":"Jard",
+  "btn":"btn-secondary"
+},
+{
+  "libele":"Salle",
+  "btn":"btn-dark"
+}
+]
